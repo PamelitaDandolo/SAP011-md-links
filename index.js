@@ -1,4 +1,4 @@
-// fazer a importação do file system que é a biblioteca nativa do node.js, não é necessário faezr instalação
+// fazer a importação do file system que é a biblioteca nativa do node.js, não é necessário fazer instalação
 const fs = require("fs")
 
 function soma(a, b) {
@@ -10,11 +10,10 @@ function lerArquivo(caminhoDoArquivo){
     fs.readFile(caminhoDoArquivo, "utf8", (err, data) => {
       if(err) reject(err); // se tiver erro, lançar o erro
 
-      resolve(data);
+      resolve(data); //parâmetro data é onde está o conteúdo do arquivo
     });
 
   })
-
 }
 
 module.exports = { soma, lerArquivo };

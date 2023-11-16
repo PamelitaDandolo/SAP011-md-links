@@ -6,7 +6,7 @@ const chalk = require('chalk');
 
 const resultado = soma(1, 3);
 
-console.log(chalk.bgRed("A soma é: "),chalk.yellow(resultado));
+console.log(chalk.bgYellow("A soma é: "),chalk.yellow(resultado));
 
 lerArquivo('./test/files/oneFile.md');
 
