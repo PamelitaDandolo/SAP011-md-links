@@ -1,5 +1,5 @@
 // importação do file system que é a biblioteca nativa do node.js, não é necessário fazer instalação
-const fs = require("fs");
+const fs = require('fs');
 
 function soma(a, b) {
   return a + b;
