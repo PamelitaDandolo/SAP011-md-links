@@ -9,5 +9,7 @@
   "parserOptions": {
     "ecmaVersion": "latest"
   },
-  "rules": {}
+  "rules": {
+    "import/extensions": "off" // desabilitar uma regra padrão do airbnb, caso o caminho do arquivo .js
+  }
 }
