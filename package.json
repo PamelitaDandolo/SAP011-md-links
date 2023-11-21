@@ -14,7 +14,9 @@
   },
   "scripts": {
     "lint": "npx eslint .",
-    "test": "jest"
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage"
   },
   "devDependencies": {
     "eslint": "^8.53.0",

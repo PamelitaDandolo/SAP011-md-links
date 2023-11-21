@@ -4,7 +4,8 @@ const fs = require('fs');
 function soma(a, b) {
   return a + b;
 }
-
+// leitura do arquivo
+// validação dos links
 function lerArquivo(caminhoDoArquivo) {
   return new Promise((resolve, reject) => {
     fs.readFile(caminhoDoArquivo, 'utf8', (err, data) => {
