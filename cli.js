@@ -1,13 +1,17 @@
+#!/usr/bin/env node
+// em sistemas *nix este script será interpretado utilizando node
 // tudo que for console.log manter no cli.js porque aqui é como manipulação de dom
-// aqui é manipulação de tela
+const fs = require('fs');
 const chalk = require('chalk');
-const { soma, lerArquivo } = require('./index.js');
+const { mdLinks } = require('./index.js');
+const cliValidate = 
 
-const resultado = soma(1, 3);
+// criação da CLI
+const argv = 
 
-console.log(chalk.bgYellow('A soma é: '), chalk.yellow(resultado));
-
-lerArquivo('./test/files/oneFile.md')
+mdLinks('./test/files/oneFile.md')
   .then((conteudoDoArquivo) => {
     console.log(chalk.bgYellow(conteudoDoArquivo));
   });
+
+console.log('minha cli em nodejs');

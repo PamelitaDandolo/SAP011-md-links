@@ -1,12 +1,9 @@
 // importação do file system que é a biblioteca nativa do node.js, não é necessário fazer instalação
 const fs = require('fs');
 
-function soma(a, b) {
-  return a + b;
-}
 // leitura do arquivo
 // validação dos links
-function lerArquivo(caminhoDoArquivo) {
+function mdLinks(caminhoDoArquivo) {
   return new Promise((resolve, reject) => {
     fs.readFile(caminhoDoArquivo, 'utf8', (err, data) => {
       if (err) reject(err); // se tiver erro, lançar o erro
@@ -16,4 +13,4 @@ function lerArquivo(caminhoDoArquivo) {
   });
 }
 
-module.exports = { soma, lerArquivo };
+module.exports = { mdLinks };
