@@ -4,10 +4,10 @@
 const fs = require('fs');
 const chalk = require('chalk');
 const { mdLinks } = require('./index.js');
-const cliValidate = 
+// const cliValidate = 
 
 // criação da CLI
-const argv = 
+// const argv = 
 
 mdLinks('./test/files/oneFile.md')
   .then((conteudoDoArquivo) => {
