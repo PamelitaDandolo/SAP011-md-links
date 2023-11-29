@@ -8,7 +8,14 @@ function mdLinks(caminhoDoArquivo) {
       if (err) reject(err); // se tiver erro, chama o reject
       const pattern = /\[([^\]]+)\]\((https?[^)]+)\)/g; // regex vai ajudar a extrair os links, padrão de caracteres
       const matches = [...data.matchAll(pattern)];
-      resolve(matches); // se der certo, chama o resolve
+      const links = matches.map((match) => {
+        return {
+          href: match[2],
+          text: match[1],
+          file: caminhoDoArquivo,
+        };
+      });
+      resolve(links); // se der certo, chama o resolve
     });
   });
 }
