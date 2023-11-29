@@ -1,17 +1,19 @@
 #!/usr/bin/env node
+// o código acime se chama shebang, ele informa ao terminal como deve ser executado
 // em sistemas *nix este script será interpretado utilizando node
 // tudo que for console.log manter no cli.js porque aqui é como manipulação de dom
 const fs = require('fs');
 const chalk = require('chalk');
-const { mdLinks } = require('./index.js');
-// const cliValidate = 
+const { mdLinks } = require('./index.js'); // importação da função
 
-// criação da CLI
-// const argv = 
+const caminhoArquivo = process.argv[2];
 
 mdLinks('./test/files/oneFile.md')
   .then((conteudoDoArquivo) => {
     console.log(chalk.bgYellow(conteudoDoArquivo));
   });
 
-console.log('minha cli em nodejs');
+const inputs = process.argv;
+console.log(inputs);
+
+console.log('Oi, CLI!');
