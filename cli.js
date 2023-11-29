@@ -11,7 +11,7 @@ const caminhoArquivo = process.argv[2];
 mdLinks('./test/files/oneFile.md')
   .then((conteudoDoArquivo) => {
     console.log(chalk.bgYellow(conteudoDoArquivo));
-    
+
   });
 
 const inputs = process.argv;
