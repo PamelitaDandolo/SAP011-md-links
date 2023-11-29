@@ -7,41 +7,43 @@ function mdLinks(caminhoDoArquivo, options) {
     fs.readFile(caminhoDoArquivo, 'utf8', (err, data) => { // o arquivo deve ser lido
       if (err) reject(err); // se tiver erro, chama o reject
       const pattern = /\[([^\]]+)\]\((https?[^)]+)\)/g; // regex vai ajudar a extrair os links, padrão de caracteres
-      const matches = [...data.matchAll(pattern)];
-      const links = matches.map((match) => {
-        return {
+      let match;
+      const links = [];
+      while ((match = pattern.exec(data)) !== null) {
+        links.push({
           href: match[2],
           text: match[1],
           file: caminhoDoArquivo,
-        };
-      });
+
+        });
+      }
+
       if (options.validate === false) {
         resolve(links); // se der certo, chama o resolve
       } else {
-        const linksValidados = links.map((link) => {
-          return fetch(link.href)
-            .then((response) => {
-              link.status = response.status;
-              if (responde.status >= 200 && response.status <= 299) {
-                link.ok = 'ok';
-              } else {
-                link.ok = 'fail';
-              }
-              return link;
+        const linksValidados = links.map((link) => fetch(link.href)
+          .then((response) => {
+            const linkValidado = { ...link };
+            linkValidado.status = response.status;
+            if (response.status >= 200 && response.status <= 299) {
+              linkValidado.ok = 'ok';
+            } else {
+              linkValidado.ok = 'fail';
             }
-            ).catch((err) => {
-              link.ok = 'fail';
-              link.status = 'ENOTFOUND';
-              return link;
-            }
-            );
-        });
+            return linkValidado;
+          })
+          .catch(() => {
+            const linkValidado = { ...link };
+            linkValidado.ok = 'fail';
+            linkValidado.status = 'ENOTFOUND';
+            return linkValidado;
+          }));
         resolve(Promise.all(linksValidados));
       }
     });
   });
 }
 
-mdLinks('./README.md', { validate: true }).then(result => console.log(result));
+mdLinks('./oneFile.md', { validate: true }).then((result) => console.log(result));
 
 module.exports = { mdLinks };

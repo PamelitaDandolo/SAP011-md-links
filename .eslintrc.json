@@ -10,6 +10,7 @@
     "ecmaVersion": "latest"
   },
   "rules": {
-    "import/extensions": "off" // desabilitar uma regra padrão do airbnb, caso o caminho do arquivo .js
+    "import/extensions": "off", // desabilitar uma regra padrão do airbnb, caso o caminho do arquivo .js
+    "no-cond-assign": "off"
   }
 }
