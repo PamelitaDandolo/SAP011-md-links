@@ -7,7 +7,7 @@
 
 // const caminhoArquivo = process.argv[2];
 
-// mdLinks('./test/files/oneFile.md', { validate: false })
+// mdLinks('./oneFile.md', { validate: true })
 //   .then((conteudoDoArquivo) => {
 //     console.log(chalk.bgYellow(conteudoDoArquivo));
 //   });
