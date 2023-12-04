@@ -1,9 +1,9 @@
- <details><summary>Links</summary><p>
-
-  - [Array - MDN](https://developer.mozilla.org//pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/)
-  - [Array.prototype.sort() - MDN](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/sort)
-  - [Array.prototype.forEach() - MDN](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach)
-  - [Array.prototype.map() - MDN](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/map)
-  - [Array.prototype.filter() - MDN](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/filter)
-  - [Array.prototype.reduce() - MDN](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce)
-  </p></details>
+[Array - MDN](https://developer.mozilla.org//pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/)
+[pamelita](https://www.pamelitadandolo.com.br)
+jsfhahrgaejçjkhviaurehçkngç [blablabla](https://blablabla) 
+ 
+ [
+    {href: 'https://developer.mozilla.org//pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/', text: 'Array - MDN', file: './oneFile.md'},
+    {href: 'https://www.pamelitadandolo.com.br', text: 'pamelita', file: './oneFile.md'},
+    {href: 'https://blablabla', text: 'blablabla', file: './oneFile.md'},
+ ]

@@ -44,6 +44,6 @@ function mdLinks(caminhoDoArquivo, options) {
   });
 }
 
-mdLinks('./oneFile.md', { validate: true }).then((result) => console.log(result));
+// mdLinks('./oneFile.md', { validate: true }).then((result) => console.log(result));
 
 module.exports = { mdLinks };
