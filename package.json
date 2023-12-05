@@ -1,5 +1,5 @@
 {
-  "name": "md-links",
+  "name": "md-links-pamela-dandolo",
   "version": "0.1.0",
   "engines": {
     "node": ">=16.x"
@@ -8,6 +8,11 @@
     "createdAt": "2023-09-20T11:50:43.165Z",
     "version": "6.2.0",
     "commit": "a5360f78b634be4f14eaea996ee4c7afc85a2f48"
+  },
+  "description": "Este é um projeto para extração e validação de links de arquivos do tipo Markdown",
+  "main": "./src/index.js",
+  "directories": {
+    "test": "test"
   },
   "bin": {
     "md-links": "cli.js"
@@ -22,6 +27,15 @@
     "lint": "npx eslint .",
     "test": "jest --coverage --verbose"
   },
+  "keywords": [
+    "md-links",
+    "Markdown",
+    "links",
+    "validation",
+    "Node.js"
+  ],
+  "author": "Pamela Dandolo",
+  "license": "ISC",
   "devDependencies": {
     "eslint": "^8.53.0",
     "eslint-config-airbnb": "^19.0.4",
